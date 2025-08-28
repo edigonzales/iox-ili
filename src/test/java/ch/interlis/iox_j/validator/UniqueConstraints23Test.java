@@ -1036,6 +1036,10 @@ public class UniqueConstraints23Test {
 		validator.validate(new ObjectEvent(obj2));
 		validator.validate(new EndBasketEvent());
 		validator.validate(new EndTransferEvent());
+
+		System.out.println(logger.getErrs().size());
+		System.out.println(logger.getErrs().get(0).getEventMsg());
+
 		// Asserts.
 		assertTrue(logger.getErrs().size()==0);
 	}
